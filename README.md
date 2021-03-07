@@ -1,2 +1,2 @@
 # rough-draft-project
-# training project
+training project
