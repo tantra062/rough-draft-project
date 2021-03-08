@@ -89,6 +89,7 @@ h1,h2,h3,h4,h5,h6{
 
 h3{
   text-align: center;
+  margin-bottom: 50px !important;
 }
 
 .golden-preset{
@@ -97,6 +98,34 @@ h3{
 
 ul{
   list-style-type: none;
+  padding: 0px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+section.hero,
+section.banner{  
+  margin: 0;
+
+}
+
+.underline {
+  text-decoration: none;
+  position: relative;
+}
+
+.underline:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: -14px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 7%;
+    background: #565661;
+    transition: .5s;
 }
 
 /* HOME */
@@ -108,14 +137,16 @@ ul{
   /* top: -56px; */
 }
 
-/* .hero img {
+.hero img {
   vertical-align: middle;
   border-style: none;
-  margin: 10px auto;
+  margin: 112px auto;
   display: flex;
   height: auto;
-  max-width: 100%
-} */
+  
+  max-width: 50vw;
+  min-width: 400px;
+} 
 
 
 .banner .col-lg-4.col-sm-12.col-12{
@@ -126,8 +157,17 @@ ul{
   font-size: 0.8em;
 }
 
-.banner .row .col.col-lg-4.col-sm-12.col-12:nth-child(2){
-  background: beige;
+/* .banner .row .col.col-lg-4.col-sm-12.col-12:nth-child(2){
+   background: beige; 
+} */
+
+.banner .col.col-lg-4.col-sm-12.col-12:nth-child(2){
+  background: url("../assets/img/banner.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
 }
 
 
@@ -144,16 +184,66 @@ a.btn.btn-theme {
   width: 100px;
 }
 
+/* carousel */
+ol.carousel-indicators li {
+  background-color: black;
+}
+
+ol.carousel-indicators{
+  bottom: -25px;
+}
+
+a.carousel-control-prev,
+a.carousel-control-next {
+  background-color: #d4d3d3;
+}
+
 /* services */
 .services {
   text-align: center;
 }
+section.services.container img {
+  width: 100%;
+}
 
-.services .col.col-lg-4.col-sm-12.col-12:nth-child(odd){
+.services span{
+  display: block;
+  font-size: 0.6em;
+}
+.services h4 {
+  font-size: 1.5rem;
+  margin-bottom: 30px !important;
+}
+
+/* .services .col.col-lg-4.col-sm-12.col-12:nth-child(odd){
   background: aliceblue;
 }
 .services .col.col-lg-4.col-sm-12.col-12:nth-child(even){
   background: tan;
+} */
+
+/* .services .col.col-lg-4.col-sm-12.col-12:nth-child(1) {
+  background: url("../assets/img/haircare.jpeg") no-repeat fixed;
+  height: 450px;
+  position: relative;
+} */
+
+.services .col.col-lg-4.col-sm-12.col-12{
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: white;
+  height: 500px;
+}
+
+.services .col.col-lg-4.col-sm-12.col-12 img.background{
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
 }
 
 /* reviews */
@@ -173,4 +263,12 @@ a.btn.btn-theme {
 }
 .team h3{
   text-align: center
+}
+
+
+/* contact-us */
+.cta form {
+border: solid 2px #9a9696;
+border-radius: 5px;
+padding: 30px;
 }
