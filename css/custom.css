@@ -2,6 +2,11 @@
 .navbar-light .navbar-brand{
   position: absolute;
 }
+
+nav.sticky-top{
+  border-bottom: 4px solid gold;
+}
+
 .navbar-bar p{
   font-weight: 400;
   color: #807247;
@@ -47,6 +52,7 @@ nav.navbar-light.bg-light{
 footer{
   text-align: center;
   background: #212529;
+  border-top: 3px solid gold;
 }
 
 footer .container{
@@ -87,11 +93,21 @@ h1,h2,h3,h4,h5,h6{
   margin: 20px 0px
 }
 
+
+p,span,a{
+  font-family: lato !important;
+}
+
 h3{
   text-align: center;
   margin-bottom: 50px !important;
+  font-size: 54px;
 }
-
+h4{
+  font-size: 44px;
+  margin-bottom: 70px;
+  text-align: center;
+}
 .golden-preset{
   color: rgb(229 195 81);
 }
@@ -123,8 +139,8 @@ section.banner{
     margin: 0 auto;
     left: 0;
     right: 0;
-    width: 7%;
-    background: #565661;
+    width: 10%;
+    background: #b9a255;
     transition: .5s;
 }
 
@@ -135,6 +151,7 @@ section.banner{
   height: 60vh;  
   position: relative;
   /* top: -56px; */
+  border-bottom: 4px solid gold;
 }
 
 .hero img {
@@ -152,22 +169,32 @@ section.banner{
 .banner .col-lg-4.col-sm-12.col-12{
   padding: 100px;
 }
+.banner .col-lg-4.col-sm-12.col-12:nth-child(2){
+  text-align: center;
+}
+
+.banner .col-lg-4.col-sm-12.col-12:nth-child(2) .btn{
+  text-align: center;
+  color: #b9a255;
+  margin-top: 70px;
+  border-color: #b9a255;
+}
+
+.banner .col-lg-4.col-sm-12.col-12 a{
+  position: relative;
+  bottom: 0
+}
+
+.banner .col-lg-4.col-sm-12.col-12 h4:nth-child(2){
+  color: white;
+  position: relative;
+  top: 0;
+  padding: 0;
+}
+
 .banner span{
   display: block;
   font-size: 0.8em;
-}
-
-/* .banner .row .col.col-lg-4.col-sm-12.col-12:nth-child(2){
-   background: beige; 
-} */
-
-.banner .col.col-lg-4.col-sm-12.col-12:nth-child(2){
-  background: url("../assets/img/banner.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white;
 }
 
 
@@ -176,7 +203,7 @@ section.banner{
 }
 
 a.btn.btn-theme {
-  border: solid 1px rgb(229 195 81);
+  border: solid 1px #b9a255;
   padding: 10px 22px;
   margin: 20px auto;
   display: block;
@@ -202,32 +229,35 @@ a.carousel-control-next {
 .services {
   text-align: center;
 }
-section.services.container img {
+section.services-page.container img {
   width: 100%;
 }
 
-.services span{
+.services-page span{
   display: block;
-  font-size: 0.6em;
+  font-size: 0.3em;
 }
 .services h4 {
-  font-size: 1.5rem;
-  margin-bottom: 30px !important;
+  font-size: 45px;
+  color: white;
+  font-family: "playfair display" !important;
+}
+.services-page h4{
+  font-size: 45px;
+  font-family: "playfair display" !important;
+}
+.banner h4{
+  font-size: 45px;
+  font-family: "playfair display" !important;
 }
 
-/* .services .col.col-lg-4.col-sm-12.col-12:nth-child(odd){
-  background: aliceblue;
+.services img{
+  width: 30%;
 }
-.services .col.col-lg-4.col-sm-12.col-12:nth-child(even){
-  background: tan;
-} */
-
-/* .services .col.col-lg-4.col-sm-12.col-12:nth-child(1) {
-  background: url("../assets/img/haircare.jpeg") no-repeat fixed;
-  height: 450px;
-  position: relative;
-} */
-
+.services .col.col-lg-4.col-sm-12.col-12{
+  padding: 70px 0px;
+}
+/* for img background */
 .services .col.col-lg-4.col-sm-12.col-12{
   display: inline-block;
   overflow: hidden;
@@ -236,16 +266,25 @@ section.services.container img {
   color: white;
   height: 500px;
 }
+/* for img background */
+.banner .col-lg-4.col-sm-12.col-12:nth-child(2){
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: white;
+  height: auto;
+}
 
-.services .col.col-lg-4.col-sm-12.col-12 img.background{
+img.background{
   pointer-events: none;
   position: absolute;
   left: 0;
   width: 100%;
-  height: 500px;
   z-index: -1;
+  top:0;
+  height: 800px;
 }
-
 /* reviews */
 .reviews {
   text-align: center;
@@ -264,11 +303,23 @@ section.services.container img {
 .team h3{
   text-align: center
 }
+.team .card-body{
+  padding: 0;
+}
+.role{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #675b5b;
+}
+.about .row .col p,.team .row .col p, .team .card-text, .team .card-title{
+  text-align: center
+}
 
 
 /* contact-us */
 .cta form {
-border: solid 2px #9a9696;
+border: solid 2px #b9a255;
 border-radius: 5px;
 padding: 30px;
 }
